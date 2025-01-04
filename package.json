@@ -4,18 +4,22 @@
   "description": "Dynamic User Interface Interactions for The Odin Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
     "@eslint/js": "^9.13.0",
+    "babel-jest": "^29.7.0",
     "css-loader": "^7.1.2",
     "eslint": "^9.13.0",
     "eslint-plugin-react": "^7.37.2",
     "globals": "^15.11.0",
     "html-webpack-plugin": "^5.6.3",
+    "jest": "^29.7.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",

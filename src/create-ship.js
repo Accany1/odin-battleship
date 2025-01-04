@@ -1,13 +1,14 @@
 function createShip(shipLength) {
     const length = shipLength
-    const hits = []
+    let hits = 0
 
     return {
         getLength: () => length,
-        hit: (position) => {
-            hits.push(position)
+        hit: () => {
+            hits += 1
         },
-        isSunk: () => hits.length === length
+        isSunk: () => hits.length === length,
+        currentHits: () => hits
     }
 }
 
