@@ -7,7 +7,7 @@ function createShip(shipLength) {
         hit: () => {
             hits += 1
         },
-        isSunk: () => hits.length === length,
+        isSunk: () => hits === length,
         currentHits: () => hits
     }
 }

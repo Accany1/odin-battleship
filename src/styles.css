@@ -1,0 +1,54 @@
+body,
+html {
+    margin: 0px;
+    background-color: #f1faee;
+    color: #0d1b2a;
+    font-family: 'montserrat', system-ui,-apple-system, BlinkMacSystemFont,Arial, sans-serif; 
+    height: 100%;
+}
+
+h1 {
+    left: 50%;
+    top: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.page-div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.board-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.gameboard {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    justify-self: center;
+    border: 1px solid #61a5c2;
+    overflow: hidden;
+}
+
+.tile {
+    background-color: #a9d6e5;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #61a5c2;
+    cursor: pointer;
+}
+
+.miss {
+    background-color: #fb8500;
+}
+
+.hit {
+    background-color: black;
+}
