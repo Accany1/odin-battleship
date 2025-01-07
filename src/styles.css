@@ -20,14 +20,22 @@ h1 {
     height: 100%;
 }
 
-.board-container {
+.board-container,
+.board-titles {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    margin-top: 80px;
 }
 
-.gameboard {
+.board-titles {
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 20px 0px;
+}
+
+
+.gameboard-human {
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -35,9 +43,22 @@ h1 {
     justify-self: center;
     border: 1px solid #61a5c2;
     overflow: hidden;
+    margin-right: 30px;
 }
 
-.tile {
+.gameboard-computer {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    justify-self: center;
+    border: 1px solid #61a5c2;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+.tile,
+.computer-tile {
     background-color: #a9d6e5;
     width: 40px;
     height: 40px;
@@ -49,6 +70,23 @@ h1 {
     background-color: #fb8500;
 }
 
+.ship {
+    background-color: #023047;
+}
+
 .hit {
     background-color: black;
+}
+
+.current-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.current-status {
+    font-weight: 600;
+    font-size: 1.5em;
 }

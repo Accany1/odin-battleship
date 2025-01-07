@@ -22,23 +22,24 @@ function Gameboard() {
     }
 
     function receiveAttack(y,x) {
-        console.log(board[y][x] )
         // if chosen tile already exists, return false
         for (let i = 0; i < chosenTiles.length; i++) {
             if (chosenTiles[i].x === x && chosenTiles[i].y === y) {
-                return false
+                return "Error"
             }
         }
         // if tile is empty, mark X
         if (board[y][x] === null) {
             board[y][x] = "X"
             chosenTiles.push({x,y})
+            return false
         } 
         // if tile is occupied by a ship,hit it
         else if (typeof board[y][x] === "object") {
             board[y][x].hit()
-            chosenTiles.push({x,y})
+            chosenTiles.push({y,x})
             board[y][x] = "O"
+            return true
         }
     }
 
@@ -65,6 +66,12 @@ function Gameboard() {
                     return false
                 }
             }
+        } else if (dir === "y") {
+            for (let i = 0; i < shipLength; i++) {
+                if (board[Number(y)+i][Number(x)] !== null) {
+                    return false
+                }
+            }
         }
         return true
     }
@@ -81,10 +88,8 @@ function Gameboard() {
             }
             shipsCreated += 1
             placedShips.push(ship)
-            console.log(board[Number(y)][Number(x)])
             return true
         } else {
-            console.log("fail")
             return false
         }
     }

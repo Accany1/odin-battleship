@@ -19,7 +19,7 @@ function Player() {
     }
 
     function receiveAttack(y,x) {
-        gameboard.receiveAttack(y,x)
+        return gameboard.receiveAttack(y,x)
     }
 
     function getBoard() {
