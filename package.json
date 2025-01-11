@@ -2,7 +2,7 @@
   "name": "odin-dynamic-interface",
   "version": "1.0.0",
   "description": "Dynamic User Interface Interactions for The Odin Project",
-  "main": "game.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest"
   },

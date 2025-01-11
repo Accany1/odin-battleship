@@ -25,7 +25,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .board-titles {
@@ -89,4 +89,22 @@ h1 {
 .current-status {
     font-weight: 600;
     font-size: 1.5em;
+}
+
+.ship-model {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #61a5c2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
